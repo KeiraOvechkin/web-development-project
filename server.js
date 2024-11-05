@@ -16,17 +16,18 @@ app.get('/', (req, res)=>{
 app.post('/', (req, res)=>{
     console.log(req.body);
 
+    //makes the inputed data go to my email
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'keiraxps2@gmail.com',
+            user: 'keewop250@gmail.com',
             pass: 'Riley2004'
         }
     })
 
     const mailOptions = {
         from: req.body.email,
-        to: 'keiraxps2@gmail.com',
+        to: 'keewop250@gmail.com',
         message: req.body.message
     }
 
